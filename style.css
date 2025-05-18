@@ -165,7 +165,7 @@ body {
 
 .slogan {
     width: max-content;
-    font-size: 2em; 
+    font-size: 3rem; /* 修改字体大小为 2rem 以匹配浏览器默认 h1 大小 */
     font-weight: 900;
     color: transparent;
     background-clip: text;
