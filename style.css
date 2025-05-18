@@ -1,0 +1,234 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #32325d;
+    background-color: #f7fafc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 顶部菜单栏样式 */
+.header {
+    background-color: #5e72e4;
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 1.5rem;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: #fb6340;
+}
+
+/* 主页面样式 */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f7fafc;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 气泡样式 */
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(94, 114, 228, 0.1);
+    animation: bubble 15s infinite;
+    pointer-events: none;
+    bottom: 0; /* 确保气泡从页面底部出现 */
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(2);
+        opacity: 0;
+    }
+}
+
+/* 定义不同大小的气泡，增大尺寸 */
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 12s;
+}
+
+.bubble:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    animation-duration: 18s;
+}
+
+.bubble:nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 70%;
+    animation-duration: 16s;
+}
+
+.bubble:nth-child(5) {
+    width: 80px;
+    height: 80px;
+    left: 90%;
+    animation-duration: 20s;
+}
+
+.bubble:nth-child(6) {
+    width: 35px;
+    height: 35px;
+    left: 15%;
+    animation-duration: 14s;
+}
+
+.bubble:nth-child(7) {
+    width: 55px;
+    height: 55px;
+    left: 25%;
+    animation-duration: 17s;
+}
+
+.bubble:nth-child(8) {
+    width: 45px;
+    height: 45px;
+    left: 60%;
+    animation-duration: 13s;
+}
+
+.bubble:nth-child(9) {
+    width: 70px;
+    height: 70px;
+    left: 80%;
+    animation-duration: 19s;
+}
+
+.bubble:nth-child(10) {
+    width: 25px;
+    height: 25px;
+    left: 40%;
+    animation-duration: 11s;
+}
+
+.slogan-container {
+    margin-bottom: 2rem;
+}
+
+.slogan {
+    width: max-content;
+    font-size: 2em; 
+    font-weight: 900;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(97deg,#0096FF,#BB64FF 42%,#F2416B 74%,#EB7500);
+    overflow: hidden; /* 隐藏溢出内容 */
+    white-space: nowrap; /* 防止文本换行 */
+    border-right: 0.15em solid #0096FF; /* 模拟光标 */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #0096FF;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #8898aa;
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.button-container {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease; /* 添加过渡效果 */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn:nth-child(1) {
+    background-color: #5e72e4;
+    color: white;
+}
+
+.btn:nth-child(1):hover {
+    background-color: #5365cb;
+    transform: translateY(-3px); /* 鼠标悬停时上移 3px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.btn:nth-child(2) {
+    background-color: #fb6340;
+    color: white;
+}
+
+.btn:nth-child(2):hover {
+    background-color: #e65231;
+    transform: translateY(-3px); /* 鼠标悬停时上移 3px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
