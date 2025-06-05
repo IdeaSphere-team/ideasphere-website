@@ -249,3 +249,13 @@ body {
     transform: translateY(-3px); /* 鼠标悬停时上移 3px */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
+
+.btn {
+    /* 其他现有样式保持不变 */
+    text-decoration: none; /* 新增下划线去除样式 */
+}
+
+/* 确保悬停状态也不显示下划线 */
+.btn:hover {
+    text-decoration: none;
+}
